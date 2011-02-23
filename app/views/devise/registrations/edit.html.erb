@@ -1,4 +1,5 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<% title "Profil Editieren" %>
+<%= link_to "Zurück", :back, :class => 'back-link' %>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
@@ -6,26 +7,32 @@
   <p><%= f.label :name %><br />
   <%= f.text_field :name %></p>
 
-  <p><%= f.label :email %><br />
+  <p><%= f.label :email, "E-Mail" %><br />
   <%= f.text_field :email %></p>
     
-  <p><%= f.label :role %><br />
+  <p><%= f.label :role, "Rolle" %><br />
   <%= f.text_field :role %></p>
 
-  <p><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <p><%= f.label :current_password, "Aktuelles Passwort" %><br />
+  <%= f.password_field :current_password %></p>
+  
+  <p><%= f.submit "Ändern" %></p>
+  
+  <hr />
+  <h4>Passwort Ändern</h4>
+  <small>Nur ausfüllen wenn du dein Passwort ändern willst.</small>
+  <p><%= f.label :password %><br />
   <%= f.password_field :password %></p>
 
-  <p><%= f.label :password_confirmation %><br />
+  <p><%= f.label :password_confirmation, "Bestätigung" %><br />
   <%= f.password_field :password_confirmation %></p>
 
-  <p><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-  <%= f.password_field :current_password %></p>
-
-  <p><%= f.submit "Update" %></p>
+  <p><%= f.submit "Ändern" %></p>
 <% end %>
 
-<h3>Cancel my account</h3>
+<hr />
+<h4>Profil löschen</h4>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
-
-<%= link_to "Back", :back %>
+<p>
+	<%= link_to "Mein Profil löschen", registration_path(resource_name), :confirm => "Bist du sicher?", :method => :delete %>
+</p>

@@ -2319,3 +2319,2667 @@ Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 18:55:46 +0100 2011
 Rendered layouts/_navigation.html.erb (11.4ms)
 Rendered public/show.html.erb within layouts/public (36.7ms)
 Completed 200 OK in 68ms (Views: 39.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 19:03:26 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.3ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC
+  [1m[36mSubject Load (0.5ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (1.5ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (16.9ms)
+Rendered public/show.html.erb within layouts/public (46.9ms)
+Completed 200 OK in 162ms (Views: 48.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/show/test" for 127.0.0.1 at Wed Feb 23 19:03:32 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'test' AND "pages"."visible" = 't' LIMIT 1
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 1) ORDER BY sections.position ASC[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (10.9ms)
+Rendered public/show.html.erb within layouts/public (50.6ms)
+Completed 200 OK in 84ms (Views: 56.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 19:03:32 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.3ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (11.7ms)
+Rendered public/show.html.erb within layouts/public (42.5ms)
+Completed 200 OK in 155ms (Views: 45.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 19:05:45 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1
+  [1m[36mSection Load (0.2ms)[0m  [1mSELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered public/show.html.erb within layouts/application (47.9ms)
+Completed 200 OK in 85ms (Views: 52.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:05:47 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered public/index.html.erb within layouts/application (32.0ms)
+Completed 200 OK in 53ms (Views: 38.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:06:23 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (1.8ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (35.4ms)
+Rendered public/index.html.erb within layouts/application (62.7ms)
+Completed 200 OK in 81ms (Views: 66.0ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:07:40 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (34.2ms)
+Rendered public/index.html.erb within layouts/application (60.5ms)
+Completed 200 OK in 80ms (Views: 65.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:08:36 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 39ms (Views: 19.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:08:39 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 161ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:10:17 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 143ms (Views: 20.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:11:18 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (16.1ms)
+Completed 200 OK in 155ms (Views: 23.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:11:35 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+ERROR: compiling _app_views_devise_registrations_edit_html_erb__580532157__615984318_0 RAISED compile error
+/home/micha/work/clan/app/views/devise/registrations/edit.html.erb:1: syntax error, unexpected tSTRING_BEG, expecting kEND
+...utputBuffer.new; title :name "Editieren" 
+                              ^
+Function body:           def _app_views_devise_registrations_edit_html_erb__580532157__615984318_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "devise/registrations/edit";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new; title :name "Editieren" 
+@output_buffer.safe_concat('<h2>Edit ');@output_buffer.append= ( resource_name.to_s.humanize );@output_buffer.safe_concat('</h2>
+
+');@output_buffer.append=  form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| @output_buffer.safe_concat('
+');@output_buffer.safe_concat('  ');@output_buffer.append= ( devise_error_messages! );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('
+  <p>');@output_buffer.append= ( f.label :name );@output_buffer.safe_concat('<br />
+  ');@output_buffer.append= ( f.text_field :name );@output_buffer.safe_concat('</p>
+
+  <p>');@output_buffer.append= ( f.label :email );@output_buffer.safe_concat('<br />
+  ');@output_buffer.append= ( f.text_field :email );@output_buffer.safe_concat('</p>
+    
+  <p>');@output_buffer.append= ( f.label :role );@output_buffer.safe_concat('<br />
+  ');@output_buffer.append= ( f.text_field :role );@output_buffer.safe_concat('</p>
+
+  <p>');@output_buffer.append= ( f.label :password );@output_buffer.safe_concat(' <i>(leave blank if you don\'t want to change it)</i><br />
+  ');@output_buffer.append= ( f.password_field :password );@output_buffer.safe_concat('</p>
+
+  <p>');@output_buffer.append= ( f.label :password_confirmation );@output_buffer.safe_concat('<br />
+  ');@output_buffer.append= ( f.password_field :password_confirmation );@output_buffer.safe_concat('</p>
+
+  <p>');@output_buffer.append= ( f.label :current_password );@output_buffer.safe_concat(' <i>(we need your current password to confirm your changes)</i><br />
+  ');@output_buffer.append= ( f.password_field :current_password );@output_buffer.safe_concat('</p>
+
+  <p>');@output_buffer.append= ( f.submit "Update" );@output_buffer.safe_concat('</p>
+'); end 
+@output_buffer.safe_concat('
+<h3>Cancel my account</h3>
+
+<p>Unhappy? ');@output_buffer.append= ( link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete );@output_buffer.safe_concat('.</p>
+
+');@output_buffer.append= ( link_to "Back", :back );@output_buffer.safe_concat('
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/micha/work/clan/app/views/devise/registrations/edit.html.erb:36:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/template.rb:134:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:59:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:26:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.8/gems/devise-1.1.7/lib/devise/controllers/scoped_views.rb:30:in `render_with_scope'
+/usr/lib/ruby/gems/1.8/gems/devise-1.1.7/app/controllers/devise/registrations_controller.rb:37:in `update'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:445:in `_run__415453947__process_action__944252406__callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:119:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal.rb:178:in `action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/mapper.rb:35:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/lib/ruby/gems/1.8/gems/warden-1.0.3/lib/warden/manager.rb:35:in `call'
+/usr/lib/ruby/gems/1.8/gems/warden-1.0.3/lib/warden/manager.rb:34:in `catch'
+/usr/lib/ruby/gems/1.8/gems/warden-1.0.3/lib/warden/manager.rb:34:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/application.rb:77:in `send'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/commands/server.rb:65:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/commands.rb:30
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/commands.rb:27:in `tap'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered devise/registrations/edit.html.erb within layouts/application (2.3ms)
+Completed   in 143ms
+
+ActionView::Template::Error (compile error
+/home/micha/work/clan/app/views/devise/registrations/edit.html.erb:1: syntax error, unexpected tSTRING_BEG, expecting kEND
+...utputBuffer.new; title :name "Editieren" 
+                              ^):
+    1: <% title :name "Editieren" %>
+    2: <h2>Edit <%= resource_name.to_s.humanize %></h2>
+    3: 
+    4: <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+  app/views/devise/registrations/edit.html.erb:36:in `compile'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (426.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (443.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:11:49 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 173ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:12:49 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('micha.schulz@hotmail.de')) AND ("users".id <> 1) LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 127ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:12:49 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (34.6ms)
+Rendered public/index.html.erb within layouts/application (59.9ms)
+Completed 200 OK in 78ms (Views: 64.3ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:13:12 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (34.8ms)
+Rendered public/index.html.erb within layouts/application (63.1ms)
+Completed 200 OK in 156ms (Views: 67.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:13:12 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:13:15 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 42ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:13:15 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:13:19 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('micha.schulz@hotmail.de')) AND ("users".id <> 1) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 122ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:13:19 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (35.1ms)
+Rendered public/index.html.erb within layouts/application (60.0ms)
+Completed 200 OK in 79ms (Views: 64.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:13:19 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:15:07 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (45.5ms)
+Rendered public/index.html.erb within layouts/application (152.4ms)
+Completed 200 OK in 170ms (Views: 157.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:15:08 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:15:09 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 44ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:15:09 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (9.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:15:12 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('micha.schulz@hotmail.de')) AND ("users".id <> 1) LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 127ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:15:12 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (38.0ms)
+Rendered public/index.html.erb within layouts/application (69.9ms)
+Completed 200 OK in 90ms (Views: 74.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:15:12 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:15:25 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+ERROR: compiling _app_views_layouts_application_html_erb__222351609__616920728_0 RAISED compile error
+/home/micha/work/clan/app/views/layouts/application.html.erb:18: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...t_buffer.append= ( msg, :id => "flash_#{name}" );@output_buf...
+                              ^
+Function body:           def _app_views_layouts_application_html_erb__222351609__616920728_0(local_assigns)
+            _old_virtual_path, @_virtual_path = @_virtual_path, "layouts/application";_old_output_buffer = @output_buffer;;@output_buffer = ActionView::OutputBuffer.new;@output_buffer.safe_concat('<!DOCTYPE html>
+<html>
+  <head>
+    <title>');@output_buffer.append= ( content_for?(:title) ? yield(:title) : "Untitled" );@output_buffer.safe_concat('</title>
+		');@output_buffer.append= ( stylesheet_link_tag 'blueprint/screen', 'blueprint/grid', 'blueprint/typography', 'blueprint/forms', :media => 'screen' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( stylesheet_link_tag "application", :media => 'screen' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('		');@output_buffer.append= ( stylesheet_link_tag "public", "admin", :media => 'screen' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  	<!--');@output_buffer.append= ( stylesheet_link_tag 'blueprint/print',  :media => 'print'  );@output_buffer.safe_concat('-->
+  	<!--[if lt IE 8]> ');@output_buffer.append= ( stylesheet_link_tag 'blueprint/ie', :media => 'screen' );@output_buffer.safe_concat(' <![endif]-->
+  	');@output_buffer.append= ( javascript_include_tag "jquery", "jquery-ui", "rails" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( csrf_meta_tag );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    ');@output_buffer.append= ( yield(:head) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('  </head>
+  <body>
+    <div id="container">
+');@output_buffer.append_if_string=        flash.each do |name, msg| 
+@output_buffer.safe_concat('      <div class="error">
+        ');@output_buffer.append= ( msg, :id => "flash_#{name}" );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('        </div>
+');       end 
+@output_buffer.safe_concat('      
+      <div id="user_nav">  
+');				 if user_signed_in?   
+@output_buffer.safe_concat('					Willkommen ');@output_buffer.append= ( current_user.name.capitalize );@output_buffer.safe_concat('.<br /> 
+					');@output_buffer.append= ( link_to "Ausloggen", destroy_user_session_path );@output_buffer.safe_concat(' |
+					');@output_buffer.append= ( link_to "Profil editieren", edit_user_registration_path );@output_buffer.safe_concat('  
+');				 else   
+@output_buffer.safe_concat('					');@output_buffer.append= ( link_to "Registrieren", new_user_registration_path );@output_buffer.safe_concat(' | 
+					');@output_buffer.append= ( link_to "Einloggen", new_user_session_path );@output_buffer.safe_concat('
+');				 end   
+@output_buffer.safe_concat('			</div>  
+			
+			<div id="navigation">
+        ');@output_buffer.append= ( render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      </div>
+      ');@output_buffer.append= ( content_tag :h1, yield(:title) if show_title? );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('      
+      ');@output_buffer.append= ( yield );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('    </div>
+  </body>
+</html>
+');@output_buffer.to_s
+          ensure
+            @_virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /home/micha/work/clan/app/views/layouts/application.html.erb:45:in `compile'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/template.rb:134:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:54:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/template.rb:127:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/render/layouts.rb:80:in `_render_layout'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:62:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:56:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_view/render/rendering.rb:26:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:115:in `_render_template'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:109:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/renderers.rb:47:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/compatibility.rb:55:in `render_to_body'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:102:in `render_to_string'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:93:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:17:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:40:in `render'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/railties/controller_runtime.rb:15:in `cleanup_view_runtime'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/usr/lib/ruby/gems/1.8/gems/devise-1.1.7/lib/devise/controllers/scoped_views.rb:30:in `render_with_scope'
+/usr/lib/ruby/gems/1.8/gems/devise-1.1.7/app/controllers/devise/registrations_controller.rb:27:in `edit'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:150:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/rendering.rb:11:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:18:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:445:in `_run__415453947__process_action__155074602__callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:409:in `_run_process_action_callbacks'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `send'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:93:in `run_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/notifications.rb:52:in `instrument'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/base.rb:119:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/abstract_controller/rendering.rb:41:in `process'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal.rb:138:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_controller/metal.rb:178:in `action'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:62:in `dispatch'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:27:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/mapper.rb:35:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:148:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:93:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:75:in `optimized_each'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/code_generation.rb:92:in `recognize'
+/usr/lib/ruby/gems/1.8/gems/rack-mount-0.6.13/lib/rack/mount/route_set.rb:139:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/routing/route_set.rb:492:in `call'
+/usr/lib/ruby/gems/1.8/gems/warden-1.0.3/lib/warden/manager.rb:35:in `call'
+/usr/lib/ruby/gems/1.8/gems/warden-1.0.3/lib/warden/manager.rb:34:in `catch'
+/usr/lib/ruby/gems/1.8/gems/warden-1.0.3/lib/warden/manager.rb:34:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/head.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/methodoverride.rb:24:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/flash.rb:182:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/cookies.rb:302:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:32:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:12:in `cache'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/query_cache.rb:31:in `call'
+/usr/lib/ruby/gems/1.8/gems/activerecord-3.0.4/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:46:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/sendfile.rb:107:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/rack/logger.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/runtime.rb:17:in `call'
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.4/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `synchronize'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/lock.rb:11:in `call'
+/usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/static.rb:30:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/application.rb:168:in `call'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/application.rb:77:in `send'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/application.rb:77:in `method_missing'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/rack/log_tailer.rb:14:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/content_length.rb:13:in `call'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:52:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/handler/webrick.rb:13:in `run'
+/usr/lib/ruby/gems/1.8/gems/rack-1.2.1/lib/rack/server.rb:213:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/commands/server.rb:65:in `start'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/commands.rb:30
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/commands.rb:27:in `tap'
+/usr/lib/ruby/gems/1.8/gems/railties-3.0.4/lib/rails/commands.rb:27
+script/rails:6:in `require'
+script/rails:6
+Rendered devise/registrations/edit.html.erb within layouts/application (96.5ms)
+Completed   in 122ms
+
+ActionView::Template::Error (compile error
+/home/micha/work/clan/app/views/layouts/application.html.erb:18: syntax error, unexpected tASSOC, expecting tCOLON2 or '[' or '.'
+...t_buffer.append= ( msg, :id => "flash_#{name}" );@output_buf...
+                              ^):
+    15:     <div id="container">
+    16:       <% flash.each do |name, msg| %>
+    17:       <div class="error">
+    18:         <%= msg, :id => "flash_#{name}" %>
+    19:         </div>
+    20:       <% end %>
+    21:       
+  app/views/layouts/application.html.erb:45:in `compile'
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.9ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (350.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (433.5ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:16:03 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.5ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 43ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:16:03 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:16:08 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('micha.schulz@hotmail.de')) AND ("users".id <> 1) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 119ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:16:08 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (37.0ms)
+Rendered public/index.html.erb within layouts/application (148.0ms)
+Completed 200 OK in 166ms (Views: 152.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:16:08 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:17:56 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 40ms (Views: 19.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:17:56 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:17:59 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('micha.schulz@hotmail.de')) AND ("users".id <> 1) LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 131ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:17:59 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (37.3ms)
+Rendered public/index.html.erb within layouts/application (66.9ms)
+Completed 200 OK in 87ms (Views: 72.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:17:59 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:20:36 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 41ms (Views: 20.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:20:36 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:20:40 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('micha.schulz@hotmail.de')) AND ("users".id <> 1) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 130ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:20:40 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (39.9ms)
+Rendered public/index.html.erb within layouts/application (65.4ms)
+Completed 200 OK in 89ms (Views: 70.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:20:40 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:21:19 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 43ms (Views: 22.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:21:20 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:21:23 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Update", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('micha.schulz@hotmail.de')) AND ("users".id <> 1) LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 123ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:21:23 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (125.4ms)
+Rendered public/index.html.erb within layouts/application (149.9ms)
+Completed 200 OK in 171ms (Views: 157.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:21:24 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/show/test" for 127.0.0.1 at Wed Feb 23 19:21:30 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'test' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.3ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 1) ORDER BY sections.position ASC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (11.1ms)
+Rendered public/show.html.erb within layouts/application (67.5ms)
+Completed 200 OK in 105ms (Views: 72.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:21:30 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.1ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 19:21:32 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.2ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (11.6ms)
+Rendered public/show.html.erb within layouts/application (62.0ms)
+Completed 200 OK in 101ms (Views: 66.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:21:32 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/show/test" for 127.0.0.1 at Wed Feb 23 19:21:34 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'test' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.3ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 1) ORDER BY sections.position ASC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (13.5ms)
+Rendered public/show.html.erb within layouts/application (152.0ms)
+Completed 200 OK in 194ms (Views: 156.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:21:34 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 19:32:43 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.2ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (13.8ms)
+Rendered public/show.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 95ms (Views: 65.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:32:43 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:32:44 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 43ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:32:45 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (5.8ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:33:24 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.5ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 40ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:33:24 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:35:23 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 42ms (Views: 19.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:35:23 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:37:36 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 41ms (Views: 19.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:37:36 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:37:53 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 45ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:37:53 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.0ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:38:11 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 40ms (Views: 20.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:38:11 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:38:25 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.2ms)
+Completed 200 OK in 44ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:38:25 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:39:26 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 41ms (Views: 19.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:39:26 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 19:39:59 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.3ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.4ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (12.6ms)
+Rendered public/show.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 182ms (Views: 70.4ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:39:59 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at Wed Feb 23 19:40:08 +0100 2011
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "users" SET "updated_at" = '2011-02-23 18:40:08.520498', "remember_token" = NULL, "remember_created_at" = NULL WHERE "users"."id" = 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:40:08 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (119.2ms)
+Rendered public/index.html.erb within layouts/application (132.5ms)
+Completed 200 OK in 150ms (Views: 137.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:40:08 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Wed Feb 23 19:40:11 +0100 2011
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered layouts/_navigation.html.erb (0.8ms)
+Rendered devise/registrations/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 41ms (Views: 31.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:40:11 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:40:55 +0100 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered devise/shared/_links.erb (82.2ms)
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/new.html.erb within layouts/application (98.5ms)
+Completed 200 OK in 125ms (Views: 104.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:40:55 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:43:24 +0100 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (19.3ms)
+Completed 200 OK in 47ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:43:25 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:43:52 +0100 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 46ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:43:53 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:44:19 +0100 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 48ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:44:19 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:44:28 +0100 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 44ms (Views: 23.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:44:28 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:44:46 +0100 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 47ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:44:46 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:45:18 +0100 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 54ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:45:18 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:45:29 +0100 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered layouts/_navigation.html.erb (1.0ms)
+Rendered devise/registrations/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 48ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:45:29 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 19:45:48 +0100 2011
+  Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"commit"=>"Sign up", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>""}}
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 50ms (Views: 23.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:45:48 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 19:47:15 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 37ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:47:16 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Feb 23 19:47:20 +0100 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Sign in", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "remember_me"=>"0", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'mez' LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "sign_in_count" = 4, "updated_at" = '2011-02-23 18:47:20.455497', "current_sign_in_at" = '2011-02-23 18:47:20.454710', "last_sign_in_at" = '2011-02-23 16:58:48.855779' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 245ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:47:20 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (119.3ms)
+Rendered public/index.html.erb within layouts/application (145.1ms)
+Completed 200 OK in 166ms (Views: 150.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:47:20 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:47:22 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 39ms (Views: 19.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:47:22 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:48:30 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.5ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 45ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:48:30 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:49:23 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 43ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:49:23 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:51:12 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 42ms (Views: 20.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:51:12 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:51:27 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 42ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:51:27 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:51:41 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.5ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 40ms (Views: 20.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:51:41 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:53:01 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 42ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:53:01 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (16.2ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:53:35 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.5ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (14.9ms)
+Completed 200 OK in 41ms (Views: 20.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:53:35 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 19:57:29 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 40ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:57:29 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at Wed Feb 23 19:57:32 +0100 2011
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 22ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:57:32 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (33.3ms)
+Rendered public/index.html.erb within layouts/application (48.4ms)
+Completed 200 OK in 69ms (Views: 54.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:57:32 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 19:57:33 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 43ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:57:33 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Feb 23 19:57:41 +0100 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Einloggen", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "remember_me"=>"1", "password"=>"[FILTERED]"}}
+Completed   in 8ms
+  Processing by Devise::SessionsController#new as HTML
+  Parameters: {"commit"=>"Einloggen", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"", "remember_me"=>"1", "password"=>"[FILTERED]"}}
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered layouts/_navigation.html.erb (0.5ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 30ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:57:41 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Feb 23 19:57:47 +0100 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Einloggen", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "remember_me"=>"1", "password"=>"[FILTERED]"}}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."name" = 'mez' LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."remember_token" = 'AgvYMJOOzgqJj2XyFtzf' LIMIT 1[0m
+  [1m[35mAREL (1.6ms)[0m  UPDATE "users" SET "remember_token" = 'AgvYMJOOzgqJj2XyFtzf', "remember_created_at" = '2011-02-23 18:57:47.743988', "updated_at" = '2011-02-23 18:57:47.744373' WHERE "users"."id" = 1
+  [1m[36mAREL (1.6ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = '2011-02-23 18:57:47.846101', "sign_in_count" = 5, "updated_at" = '2011-02-23 18:57:47.846925', "last_sign_in_at" = '2011-02-23 18:47:20.454710' WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 300ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:57:47 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (34.9ms)
+Rendered public/index.html.erb within layouts/application (64.7ms)
+Completed 200 OK in 95ms (Views: 70.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:57:48 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.8ms)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at Wed Feb 23 19:59:32 +0100 2011
+  Processing by Devise::SessionsController#destroy as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mAREL (0.4ms)[0m  [1mUPDATE "users" SET "remember_created_at" = NULL, "updated_at" = '2011-02-23 18:59:32.162802', "remember_token" = NULL WHERE "users"."id" = 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 121ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 19:59:32 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (38.9ms)
+Rendered public/index.html.erb within layouts/application (54.1ms)
+Completed 200 OK in 75ms (Views: 59.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:59:32 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.4ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 19:59:33 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 41ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:59:33 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Feb 23 19:59:35 +0100 2011
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (2.6ms)
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/passwords/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 42ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:59:35 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 19:59:58 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 38ms (Views: 20.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 19:59:58 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Feb 23 20:00:02 +0100 2011
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (1.1ms)
+Rendered devise/passwords/new.html.erb within layouts/application (22.3ms)
+Completed 200 OK in 42ms (Views: 31.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:02 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Feb 23 20:00:32 +0100 2011
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/passwords/new.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 45ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:32 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 20:00:38 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (2.0ms)
+Rendered layouts/_navigation.html.erb (0.8ms)
+Rendered devise/sessions/new.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 134ms (Views: 23.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:38 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Feb 23 20:00:41 +0100 2011
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/passwords/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 36ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:41 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 20:00:42 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 40ms (Views: 22.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:42 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Feb 23 20:00:43 +0100 2011
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/passwords/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 36ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:43 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 20:00:44 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 40ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:44 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Feb 23 20:00:45 +0100 2011
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/passwords/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 37ms (Views: 27.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:45 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 20:00:46 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.8ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 40ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:46 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Feb 23 20:00:47 +0100 2011
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.9ms)
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/passwords/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 123ms (Views: 29.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:47 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 20:00:49 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.7ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 56ms (Views: 22.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:49 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/users/password/new" for 127.0.0.1 at Wed Feb 23 20:00:50 +0100 2011
+  Processing by Devise::PasswordsController#new as HTML
+Rendered devise/shared/_links.erb (1.5ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/passwords/new.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 35ms (Views: 25.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:50 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at Wed Feb 23 20:00:56 +0100 2011
+  Processing by Devise::SessionsController#new as HTML
+Rendered devise/shared/_links.erb (1.6ms)
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/sessions/new.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 39ms (Views: 20.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:00:56 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at Wed Feb 23 20:01:01 +0100 2011
+  Processing by Devise::SessionsController#create as HTML
+  Parameters: {"commit"=>"Einloggen", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "remember_me"=>"0", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."name" = 'mez' LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  UPDATE "users" SET "last_sign_in_at" = '2011-02-23 18:57:47.846101', "updated_at" = '2011-02-23 19:01:01.776360', "sign_in_count" = 6, "current_sign_in_at" = '2011-02-23 19:01:01.775769' WHERE "users"."id" = 1
+Redirected to http://localhost:3000/
+Completed 302 Found in 222ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 20:01:01 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (36.3ms)
+Rendered public/index.html.erb within layouts/application (143.2ms)
+Completed 200 OK in 165ms (Views: 147.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:01:02 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 20:01:05 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 40ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:01:05 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 20:01:31 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 131ms (Views: 21.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:01:31 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Wed Feb 23 20:01:42 +0100 2011
+  Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"commit"=>"Ändern", "authenticity_token"=>"y8RjiGjql5fLkXhD5eq6SPdSE82q5IQcRiE3b5jpjQ8=", "utf8"=>"✓", "user"=>{"name"=>"mez", "current_password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"Admin", "password"=>"[FILTERED]", "email"=>"micha.schulz@hotmail.de"}}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE (LOWER("users"."email") = LOWER('micha.schulz@hotmail.de')) AND ("users".id <> 1) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 126ms
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 20:01:42 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (34.5ms)
+Rendered public/index.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 79ms (Views: 65.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:01:43 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 20:11:24 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (34.4ms)
+Rendered public/index.html.erb within layouts/application (62.5ms)
+Completed 200 OK in 81ms (Views: 67.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:11:24 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/channels" for 127.0.0.1 at Wed Feb 23 20:11:35 +0100 2011
+
+ActionController::RoutingError (No route matches "/channels"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/posts" for 127.0.0.1 at Wed Feb 23 20:11:43 +0100 2011
+  Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered posts/index.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 49ms (Views: 13.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:11:43 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/pages/edit/1?subject_id=1" for 127.0.0.1 at Wed Feb 23 20:16:09 +0100 2011
+  Processing by PagesController#edit as HTML
+  Parameters: {"subject_id"=>"1", "id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "pages" WHERE ("pages".subject_id = 1)
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" ORDER BY position ASC[0m
+Rendered pages/_form.html.erb (5.3ms)
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.1ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 4) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (7.0ms)
+Rendered pages/edit.html.erb within layouts/application (25.4ms)
+Completed 200 OK in 89ms (Views: 29.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:16:09 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/pages/edit/1?subject_id=1" for 127.0.0.1 at Wed Feb 23 20:22:23 +0100 2011
+  Processing by PagesController#edit as HTML
+  Parameters: {"subject_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pages" WHERE ("pages".subject_id = 1)[0m
+  [1m[35mSubject Load (0.4ms)[0m  SELECT "subjects".* FROM "subjects" ORDER BY position ASC
+Rendered pages/_form.html.erb (6.1ms)
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 4) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (8.1ms)
+Rendered pages/edit.html.erb within layouts/application (27.5ms)
+Completed 200 OK in 167ms (Views: 31.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:22:23 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/pages/list?subject_id=1" for 127.0.0.1 at Wed Feb 23 20:22:31 +0100 2011
+  Processing by PagesController#list as HTML
+  Parameters: {"subject_id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1[0m
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."subject_id" = 1 ORDER BY pages.position ASC
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT COUNT(*) FROM "sections" WHERE ("sections".page_id = 1)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "sections" WHERE ("sections".page_id = 2)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered pages/list.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 95ms (Views: 40.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:22:31 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/pages/edit/2?subject_id=1" for 127.0.0.1 at Wed Feb 23 20:22:33 +0100 2011
+  Processing by PagesController#edit as HTML
+  Parameters: {"subject_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pages" WHERE ("pages".subject_id = 1)[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" ORDER BY position ASC
+Rendered pages/_form.html.erb (6.3ms)
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 4) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (7.2ms)
+Rendered pages/edit.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 94ms (Views: 32.3ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:22:33 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/pages/edit/2?subject_id=1" for 127.0.0.1 at Wed Feb 23 20:23:41 +0100 2011
+  Processing by PagesController#edit as HTML
+  Parameters: {"subject_id"=>"1", "id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "pages" WHERE ("pages".subject_id = 1)
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" ORDER BY position ASC[0m
+Rendered pages/_form.html.erb (5.8ms)
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 4) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (8.6ms)
+Rendered pages/edit.html.erb within layouts/application (107.5ms)
+Completed 200 OK in 169ms (Views: 112.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:23:41 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/pages/edit/2?subject_id=1" for 127.0.0.1 at Wed Feb 23 20:25:54 +0100 2011
+  Processing by PagesController#edit as HTML
+  Parameters: {"subject_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 2 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 2 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pages" WHERE ("pages".subject_id = 1)[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" ORDER BY position ASC
+Rendered pages/_form.html.erb (5.1ms)
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.1ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 4) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (6.6ms)
+Rendered pages/edit.html.erb within layouts/application (24.6ms)
+Completed 200 OK in 88ms (Views: 29.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:25:54 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/pages/edit/2?subject_id=1" for 127.0.0.1 at Wed Feb 23 20:26:30 +0100 2011
+  Processing by PagesController#edit as HTML
+  Parameters: {"subject_id"=>"1", "id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 2 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."id" = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "pages" WHERE ("pages".subject_id = 1)
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT "subjects".* FROM "subjects" ORDER BY position ASC[0m
+Rendered pages/_form.html.erb (5.8ms)
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 4) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (7.5ms)
+Rendered pages/edit.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 94ms (Views: 30.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:26:31 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (11.8ms)
+
+
+Started GET "/pages/show/test" for 127.0.0.1 at Wed Feb 23 20:26:38 +0100 2011
+  Processing by PagesController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."id" = 0 LIMIT 1
+Completed   in 38ms
+
+ActiveRecord::RecordNotFound (Couldn't find Page with ID=test):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (431.1ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (439.1ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 20:26:53 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (1.0ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (36.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered public/index.html.erb within layouts/application (144.1ms)
+Completed 200 OK in 161ms (Views: 148.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:26:53 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.2ms)
+
+
+Started GET "/show/test" for 127.0.0.1 at Wed Feb 23 20:26:54 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'test' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.3ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 1) ORDER BY sections.position ASC
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (11.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered public/show.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 113ms (Views: 70.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:26:55 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (7.9ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 20:26:56 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.2ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.4ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (11.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered public/show.html.erb within layouts/application (58.6ms)
+Completed 200 OK in 179ms (Views: 63.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:26:56 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 20:27:51 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (30.6ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered public/index.html.erb within layouts/application (52.9ms)
+Completed 200 OK in 69ms (Views: 57.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:27:51 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 20:28:48 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (32.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered public/index.html.erb within layouts/application (55.2ms)
+Completed 200 OK in 73ms (Views: 59.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:28:48 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/show/test" for 127.0.0.1 at Wed Feb 23 20:28:49 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'test' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.3ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 1) ORDER BY sections.position ASC
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (13.4ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered public/show.html.erb within layouts/application (141.5ms)
+Completed 200 OK in 172ms (Views: 145.7ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:28:50 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 20:28:50 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1[0m
+  [1m[35mSection Load (0.4ms)[0m  SELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC[0m
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (10.2ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered public/show.html.erb within layouts/application (74.0ms)
+Completed 200 OK in 107ms (Views: 78.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:28:51 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at Wed Feb 23 20:28:53 +0100 2011
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered layouts/_navigation.html.erb (0.5ms)
+Rendered devise/registrations/edit.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 37ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:28:53 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/subjects/" for 127.0.0.1 at Wed Feb 23 20:29:04 +0100 2011
+  Processing by SubjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  SELECT COUNT(*) FROM "subjects"
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT "subjects".* FROM "subjects" ORDER BY subjects.position ASC[0m
+  [1m[35mSQL (0.5ms)[0m  SELECT COUNT(*) FROM "pages" WHERE ("pages".subject_id = 1)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "pages" WHERE ("pages".subject_id = 3)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "pages" WHERE ("pages".subject_id = 4)
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 4) ORDER BY pages.position ASC[0m
+Rendered layouts/_navigation.html.erb (10.2ms)
+Rendered subjects/list.html.erb within layouts/application (49.7ms)
+Completed 200 OK in 90ms (Views: 53.7ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:29:04 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/subjects/edit/1" for 127.0.0.1 at Wed Feb 23 20:29:07 +0100 2011
+  Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subjects"[0m
+Rendered subjects/_form.html.erb (3.1ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered subjects/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 58ms (Views: 21.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:29:07 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/subjects/show/joo" for 127.0.0.1 at Wed Feb 23 20:29:09 +0100 2011
+  Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 0 LIMIT 1[0m
+Completed   in 30ms
+
+ActiveRecord::RecordNotFound (Couldn't find Subject with ID=joo):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (421.8ms)
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (429.9ms)
+
+
+Started GET "/subjects/edit/1" for 127.0.0.1 at Wed Feb 23 20:29:17 +0100 2011
+  Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "subjects"[0m
+Rendered subjects/_form.html.erb (2.9ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered subjects/edit.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 58ms (Views: 21.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:29:17 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/subjects/edit/1" for 127.0.0.1 at Wed Feb 23 20:29:20 +0100 2011
+  Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."id" = 1 LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "subjects"[0m
+Rendered subjects/_form.html.erb (4.9ms)
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered subjects/edit.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 134ms (Views: 24.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:29:21 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 20:29:35 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (31.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered public/index.html.erb within layouts/application (56.0ms)
+Completed 200 OK in 73ms (Views: 60.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:29:35 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/show/test" for 127.0.0.1 at Wed Feb 23 20:29:37 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'test' AND "pages"."visible" = 't' LIMIT 1
+  [1m[36mSection Load (0.4ms)[0m  [1mSELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 1) ORDER BY sections.position ASC[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (20.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered public/show.html.erb within layouts/application (175.2ms)
+Completed 200 OK in 206ms (Views: 179.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:29:38 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 20:29:38 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1
+  [1m[36mSection Load (0.2ms)[0m  [1mSELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (12.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered public/show.html.erb within layouts/application (60.9ms)
+Completed 200 OK in 96ms (Views: 65.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:29:39 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at Wed Feb 23 20:29:54 +0100 2011
+  Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered posts/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 49ms (Views: 14.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:29:55 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at Wed Feb 23 20:29:56 +0100 2011
+  Processing by PostsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+Rendered posts/_form.html.erb (6.7ms)
+Rendered layouts/_navigation.html.erb (0.5ms)
+Rendered posts/new.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 50ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 20:29:56 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at Wed Feb 23 21:00:37 +0100 2011
+  Processing by PostsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered posts/_form.html.erb (6.8ms)
+Rendered layouts/_navigation.html.erb (0.7ms)
+Rendered posts/new.html.erb within layouts/application (102.8ms)
+Completed 200 OK in 151ms (Views: 120.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 21:00:37 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/posts" for 127.0.0.1 at Wed Feb 23 21:00:43 +0100 2011
+  Processing by PostsController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+Rendered layouts/_navigation.html.erb (0.6ms)
+Rendered posts/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 45ms (Views: 13.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 21:00:43 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at Wed Feb 23 21:00:50 +0100 2011
+  Processing by PublicController#index as HTML
+  [1m[35mSubject Load (0.4ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (34.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered public/index.html.erb within layouts/application (57.8ms)
+Completed 200 OK in 75ms (Views: 61.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 21:00:50 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 21:00:53 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC[0m
+  [1m[35mSubject Load (1.4ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (12.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered public/show.html.erb within layouts/application (59.8ms)
+Completed 200 OK in 95ms (Views: 63.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 21:00:53 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/show/test" for 127.0.0.1 at Wed Feb 23 21:00:54 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'test' AND "pages"."visible" = 't' LIMIT 1
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 1) ORDER BY sections.position ASC[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (12.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered public/show.html.erb within layouts/application (134.0ms)
+Completed 200 OK in 165ms (Views: 137.9ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 21:00:54 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/show/joo" for 127.0.0.1 at Wed Feb 23 21:00:56 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"joo"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'joo' AND "pages"."visible" = 't' LIMIT 1
+  [1m[36mSection Load (0.2ms)[0m  [1mSELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 2) ORDER BY sections.position ASC[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (11.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered public/show.html.erb within layouts/application (55.8ms)
+Completed 200 OK in 88ms (Views: 59.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 21:00:56 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/show/test" for 127.0.0.1 at Wed Feb 23 21:00:59 +0100 2011
+  Processing by PublicController#show as HTML
+  Parameters: {"id"=>"test"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."permalink" = 'test' AND "pages"."visible" = 't' LIMIT 1
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT "sections".* FROM "sections" WHERE "sections"."visible" = 't' AND ("sections".page_id = 1) ORDER BY sections.position ASC[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT "subjects".* FROM "subjects" WHERE "subjects"."visible" = 't' ORDER BY subjects.position ASC
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 1) ORDER BY pages.position ASC[0m
+  [1m[35mPage Load (0.2ms)[0m  SELECT "pages".* FROM "pages" WHERE "pages"."visible" = 't' AND ("pages".subject_id = 3) ORDER BY pages.position ASC
+Rendered layouts/_navigation.html.erb (10.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+Rendered public/show.html.erb within layouts/application (64.0ms)
+Completed 200 OK in 99ms (Views: 68.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stylesheets/blueprint/screen.css" for 127.0.0.1 at Wed Feb 23 21:00:59 +0100 2011
+
+ActionController::RoutingError (No route matches "/stylesheets/blueprint/screen.css"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.4/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)

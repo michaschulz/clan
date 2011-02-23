@@ -1,12 +1,13 @@
-<h2>Resend unlock instructions</h2>
+<% title "Profil Erstellen" %>
+<%= link_to "Zurück zur Seite", :back, :class => 'back-link' %>
 
 <%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
-  <p><%= f.label :email %><br />
+  <p><%= f.label :email, "E-Mail"   %><br />
   <%= f.text_field :email %></p>
 
-  <p><%= f.submit "Resend unlock instructions" %></p>
+  <p><%= f.submit "Erneut schicken" %></p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>

@@ -29,8 +29,7 @@ a:hover {}
   background: #993120; color: #FFFFFF; }
 #header h1 { margin: 0; padding: 0; }
 #main { min-height: 500px; background: #F2DC87; }
-#navigation { float: left; width: 180px; min-height: 480px; padding: 10px; 
-  background: #94B26F; color: #4C2516; }
+#navigation { float: left; padding: 10px; color: #4C2516; }
 #content { padding: 10px; }
 #footer { clear: both; height: 2.5em; text-align: right;
   background: #4C2516; color: #F2DC87; }

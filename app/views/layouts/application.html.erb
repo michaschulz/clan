@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
-		<!--<%= stylesheet_link_tag 'blueprint/screen', 'blueprint/grid', 'blueprint/typography', 'blueprint/forms', :media => 'screen' %>-->
+		<%= stylesheet_link_tag 'blueprint/screen', 'blueprint/grid', 'blueprint/typography', 'blueprint/forms', :media => 'screen' %>
 		<%= stylesheet_link_tag "application", :media => 'screen' %>
 		<%= stylesheet_link_tag "public", "admin", :media => 'screen' %>
   	<!--<%= stylesheet_link_tag 'blueprint/print',  :media => 'print'  %>-->
@@ -12,6 +12,9 @@
     <%= yield(:head) %>
   </head>
   <body>
+  		<div id="navigation">
+        <%= render(:partial => 'layouts/navigation', :locals => {:subjects => @subjects}) %>
+      </div>
     <div id="container">
       <% flash.each do |name, msg| %>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>
