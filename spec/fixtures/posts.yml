@@ -1,0 +1,11 @@
+one:
+  channel_id: 1
+  user_id: 1
+  title: MyString
+  body: MyText
+
+two:
+  channel_id: 1
+  user_id: 1
+  title: MyString
+  body: MyText

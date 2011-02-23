@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+		<!--<%= stylesheet_link_tag 'blueprint/screen', 'blueprint/grid', 'blueprint/typography', 'blueprint/forms', :media => 'screen' %>-->
+		<%= stylesheet_link_tag "application", :media => 'screen' %>
+		<%= stylesheet_link_tag "public", "admin", :media => 'screen' %>
+  	<!--<%= stylesheet_link_tag 'blueprint/print',  :media => 'print'  %>-->
+  	<!--[if lt IE 8]> <%= stylesheet_link_tag 'blueprint/ie', :media => 'screen' %> <![endif]-->
+  	<%= javascript_include_tag "jquery", "jquery-ui", "rails" %>
+    <%= csrf_meta_tag %>
+    <%= yield(:head) %>
+  </head>
+  <body>
+    <div id="container">
+      <% flash.each do |name, msg| %>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      <% end %>
+      
+      <div id="user_nav">  
+				<% if user_signed_in? %>  
+					Willkommen <%= current_user.name.capitalize %>.<br /> 
+					<%= link_to "Ausloggen", destroy_user_session_path %> |
+					<%= link_to "Profil editieren", edit_user_registration_path %>  
+				<% else %>  
+					<%= link_to "Registrieren", new_user_registration_path %> | 
+					<%= link_to "Einloggen", new_user_session_path %>
+				<% end %>  
+			</div>  
+			
+      <%= content_tag :h1, yield(:title) if show_title? %>
+      
+      <%= yield %>
+    </div>
+  </body>
+</html>

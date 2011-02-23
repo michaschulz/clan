@@ -1,0 +1,16 @@
+<% title "#{@subject.name} ändern" %>
+
+<%= link_to("<< Zurück zur Liste", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="subject edit">
+
+  <%= form_for(:subject, :url => {:action => 'update', :id => @subject.id}) do |f| %>
+  
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+    
+    <div class="form-buttons">
+      <%= submit_tag("Ändern") %>
+    </div>
+    
+  <% end %>
+</div>

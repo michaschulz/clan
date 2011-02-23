@@ -1,0 +1,16 @@
+<%= form_for @post do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :channel_id, "Kanal" %><br />
+    <%= f.select( :channel_id, 1..4 ) %>
+  </p>
+  <p>
+    <%= f.label :title, "Titel" %><br />
+    <%= f.text_field :title %>
+  </p>
+  <p>
+    <%= f.label :body, "Nachricht" %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

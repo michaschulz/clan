@@ -1,0 +1,31 @@
+<% title "Rubriken" %>
+
+<%= link_to("<< Zurück zur Seite", root_path, :class => 'back-link') %>
+
+<div class="subject list">
+  
+  <%= link_to("Neue Rubrik", {:action => 'new'}, :class => 'action new') %>
+
+  <div><%= pluralize(@subjects.size, 'Rubrik', 'Rubriken') %> gefunden</div>
+  
+  <table class="listing" summary="Subject list">
+    <tr class="header">
+      <th width="50">Pos</th>
+      <th width="400">Name</th>
+      <th width="50">Sichtbar?</th>
+      <th width="150">Seiten</th>
+      <th width="50">Aktionen</th>
+    </tr>
+    <% @subjects.each do |subject| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= subject.position %></td>
+      <td><%= link_to(subject.name, {:action => 'edit', :id => subject.id}) %></td>
+      <td class="center"><%= status_tag(subject.visible) %></td>
+      <td class="center"><%= link_to(subject.pages.size, {:controller => 'pages', :action => 'list', :subject_id => subject.id}) %></td>
+      <td class="actions">
+        <%= link_to("Löschen", {:action => 'delete', :id => subject.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

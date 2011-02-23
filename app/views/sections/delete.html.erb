@@ -1,0 +1,18 @@
+<% title  "#{@section.name} löschen" %>
+
+<%= link_to("<< Zurück zur Liste", {:action => 'list', :page_id => @page.id}, :class => 'back-link') %>
+
+<div class="section delete">
+  
+  <%= form_for(:section, :url => {:action => 'destroy', :id => @section.id, :page_id => @page.id}) do |f| -%>
+
+    <p>Bist du sicher diese Sektion zu löschen?</p>
+  
+    <p class="reference-name"><%= @section.name %></p>
+  
+    <div class="form-buttons">
+      <%= submit_tag("Löschen") %>
+    </div>
+    
+  <% end %>
+</div>

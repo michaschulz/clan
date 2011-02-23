@@ -1,0 +1,35 @@
+<%= link_to "< Zurück", posts_path %>
+
+<p>
+	<% title "Post" %>
+</p>
+
+<strong><%= @post.title.capitalize %></strong> von 
+<%= User.find(@post.user_id).name.capitalize %><br />
+
+<%= simple_format(@post.body) %>
+
+<p>
+		<% if can? :update, @post %>
+	  	<%= link_to "Editieren", edit_post_path(@post) %> |
+	  <% end %>
+	  <% if can? :destroy, @post %>
+	  	<%= link_to "Löschen", @post, :confirm => 'Are you sure?', :method => :delete %>
+	 	<% end %>
+</p>
+
+<h2><%= pluralize(@post.comments.count, "Kommentar", "Kommentare") %></h2>
+
+<div id="comments">
+	<%= render :partial => @post.comments %>
+</div>
+
+<% if can? :create, Comment %>
+	<% form_for [@post, Comment.new] do |f| %>
+		<p>
+			<%= f.label :body, "Neuer Kommentar" %><br />
+			<%= f.text_area :body %>
+		</p>
+		<p><%= f.submit "Kommentar erstellen" %></p>
+	<% end %>
+<% end %>

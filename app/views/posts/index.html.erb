@@ -1,0 +1,29 @@
+<% title "Posts" %>
+<table>
+  <tr>
+    <th>Channel</th>
+    <th>User</th>
+    <th>Title</th>
+    <th>Body</th>
+  </tr>
+  <% for post in @posts %>
+    <tr>
+      <td><%= post.channel_id %></td>
+      <td><%= pluralize(Comment.where(:post_id => post.id).count, "Kommentar", "Kommentare") %></td>
+      <td><%= link_to post.title, post %></td>
+      <td><%= post.body %></td>
+      <td>
+      	<% if can? :update, post %>
+      		<%= link_to "Editieren", edit_post_path(post) %>
+      	<% end %>
+      </td>
+      <td>
+      	<% if can? :destroy, post %>
+      		<%= link_to "Löschen", post, :confirm => 'Bist du Sicher?', :method => :delete %>
+      	<% end %>
+     	</td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Post", new_post_path %></p>

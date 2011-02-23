@@ -1,0 +1,16 @@
+<% title "Seite erstellen" %>
+
+<%= link_to("<< Zurück zur Liste", {:action => 'list', :subject_id => @subject.id}, :class => 'back-link') %>
+
+<div class="page new">
+
+  <%= form_for(:page, :url => {:action => 'create', :subject_id => @subject.id}) do |f| %>
+  
+    <%= render(:partial => 'form', :locals => {:f => f}) %>
+    
+    <div class="form-buttons">
+      <%= submit_tag("Erstellen") %>
+    </div>
+    
+  <% end %>
+</div>

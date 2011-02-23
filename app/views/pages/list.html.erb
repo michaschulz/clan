@@ -1,0 +1,29 @@
+<% title "Seiten" %>
+
+<%= link_to("<< Zurück zu den Rubriken", {:controller => "subjects", :action => 'list'}, :class => 'back-link') %>
+
+<div class="page list">
+  
+  <%= link_to("Neue Seite", {:action => 'new', :subject_id => @subject.id}, :class => 'action new') %>
+
+  <table class="listing" summary="Page list">
+    <tr class="header">
+      <th width="50">Pos</th>
+      <th width="400">Name</th>
+      <th width="50">Sichtbar?</th>
+      <th width="150">Sektionen</th>
+      <th width="50">Aktionen</th>
+    </tr>
+    <% @pages.each do |page| %>
+    <tr class="<%= cycle('odd', 'even') %>">
+      <td><%= page.position %></td>
+      <td><%= link_to(page.name, {:action => 'edit', :id => page.id, :subject_id => @subject.id}) %></td>
+      <td class="center"><%= status_tag(page.visible) %></td>
+      <td class="center"><%= link_to(page.sections.size, {:controller => 'sections', :action => 'list', :page_id => page.id}) %></td>
+      <td class="actions">
+        <%= link_to("Löschen", {:action => 'delete', :id => page.id, :subject_id => @subject.id}, :class => 'action delete') %>
+      </td>
+    </tr>
+    <% end %>
+  </table>
+</div>

@@ -1,0 +1,24 @@
+<%= error_messages_for(@pages) %>
+
+<table summary="Page form fields">
+  <tr>
+    <th><%= f.label(:subject_id, "Rubtik") %></th>
+    <td><%= f.select(:subject_id, @subjects.collect {|s| [s.name, s.id]}) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:name) %></th>
+    <td><%= f.text_field(:name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:permalink) %></th>
+    <td><%= f.text_field(:permalink) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:position) %></th>
+    <td><%= f.select(:position, 1..@page_count) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:visible, "Sichtbar?") %></th>
+    <td><%= f.check_box(:visible) %></td>
+  </tr>
+</table>

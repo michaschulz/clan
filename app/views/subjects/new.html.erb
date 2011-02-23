@@ -1,0 +1,16 @@
+<% title "Rubrik erstellen" %>
+
+<%= link_to("<< Zurück zur Liste", {:action => 'list'}, :class => 'back-link') %>
+
+<div class="subject new">
+
+  <%= form_for(:subject, :url => {:action => 'create'}) do |f| %>
+  
+    <%= render(:partial => "form", :locals => {:f => f}) %>
+    
+    <div class="form-buttons">
+      <%= submit_tag("Erstellen") %>
+    </div>
+    
+  <% end %>
+</div>

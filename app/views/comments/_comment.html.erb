@@ -1,0 +1,17 @@
+<% div_for comment do %>
+	<p>
+		<% user = User.find(comment.user_id)%>
+		<%= link_to user.name.capitalize, '#' %>
+		<small> vor <%= time_ago_in_words(comment.created_at) %></small><br />
+		<%= simple_format(comment.body) %>
+	</p>
+	<p>
+      	<% if can? :update, comment %>
+      		<%= link_to "Editieren", "#" %>
+      	<% end %>
+
+      	<% if can? :destroy, comment %>
+      		<%= link_to "Löschen", "#" %>
+      	<% end %>
+	</p>
+<% end %>
